@@ -13,12 +13,13 @@ const theme = {
     yellow: '#fffb00',
     green: '#44ce56',
     redError: '#F70100',
+    orange: '#FF9500',
   },
   fontFamily: {
-    light: 'OpenSans-Light',
-    regular: 'OpenSans-Regular',
-    semiBold: 'OpenSans-SemiBold',
-    bold: 'OpenSans-Bold',
+    // light: 'OpenSans-Light',
+    // regular: 'OpenSans-Regular',
+    // semiBold: 'OpenSans-SemiBold',
+    // bold: 'OpenSans-Bold',
   },
   fontSizes: {
     xsmall: '8px',

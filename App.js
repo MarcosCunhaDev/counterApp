@@ -1,14 +1,19 @@
 import React from 'react';
-import {Text, View} from 'react-native';
+import {Text, View, StatusBar} from 'react-native';
+import {useTheme} from 'styled-components';
 import AppContextProvider from './src/providers';
+import {SafeAreaProvider} from 'react-native-safe-area-context';
 
 import AppRouter from './src/router';
 
 function App() {
   return (
-    <AppContextProvider>
-      <AppRouter />
-    </AppContextProvider>
+    <SafeAreaProvider>
+      <AppContextProvider>
+        <StatusBar barStyle="light-content" translucent />
+        <AppRouter />
+      </AppContextProvider>
+    </SafeAreaProvider>
   );
 }
 

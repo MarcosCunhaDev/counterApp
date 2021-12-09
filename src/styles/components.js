@@ -17,7 +17,7 @@ export const KeyboardAvoidingViewContainer = styled.KeyboardAvoidingView.attrs(
 )`
   flex: 1;
   background-color: #fff;
-  ${(props: any) =>
+  ${props =>
     props.center &&
     css`
       align-items: center;
@@ -51,7 +51,6 @@ export const Center = styled.View`
 
 export const TextLight = styled.Text`
   color: ${({color, theme}) => color};
-  font-family: ${({theme}) => theme.fontFamily.light};
   ${props =>
     props.fontSize &&
     css`
@@ -61,7 +60,6 @@ export const TextLight = styled.Text`
 
 export const TextRegular = styled.Text`
   color: ${({color, theme}) => theme.colors.text};
-  font-family: ${({theme}) => theme.fontFamily.regular};
   ${props =>
     props.fontSize &&
     css`
@@ -71,7 +69,6 @@ export const TextRegular = styled.Text`
 
 export const TextSemiBold = styled.Text`
   color: ${({color, theme}) => theme.colors.text};
-  font-family: ${({theme}) => theme.fontFamily.semiBold};
   ${props =>
     props.fontSize &&
     css`
@@ -83,7 +80,6 @@ export const NoResults = styled.Text`
   margin-left: 20px;
   margin-right: 20px;
   color: ${({color, theme}) => color};
-  font-family: ${({theme}) => theme.fontFamily.semiBold};
   ${props =>
     props.fontSize &&
     css`
@@ -93,7 +89,6 @@ export const NoResults = styled.Text`
 
 export const TextBold = styled.Text`
   color: ${({color, theme}) => theme.colors.text};
-  font-family: ${({theme}) => theme.fontFamily.bold};
   ${props =>
     props.fontSize &&
     css`

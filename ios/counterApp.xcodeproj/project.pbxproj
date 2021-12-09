@@ -11,6 +11,7 @@
 		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
+		3A03AE1D2762423A0064167E /* fonts in Resources */ = {isa = PBXBuildFile; fileRef = 3A03AE1C2762423A0064167E /* fonts */; };
 		7AD33F70654366C770DDC857 /* libPods-counterApp-counterAppTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 66CEACFBE8F46335F8A13D35 /* libPods-counterApp-counterAppTests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		A30007351531C476202C8F52 /* libPods-counterApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7305B64CC4064DAF4CBDD2B4 /* libPods-counterApp.a */; };
@@ -36,6 +37,7 @@
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = counterApp/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = counterApp/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = counterApp/main.m; sourceTree = "<group>"; };
+		3A03AE1C2762423A0064167E /* fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = fonts; sourceTree = "<group>"; };
 		66CEACFBE8F46335F8A13D35 /* libPods-counterApp-counterAppTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-counterApp-counterAppTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7305B64CC4064DAF4CBDD2B4 /* libPods-counterApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-counterApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		75146DAD029B6C6B5B9A1850 /* Pods-counterApp-counterAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-counterApp-counterAppTests.release.xcconfig"; path = "Target Support Files/Pods-counterApp-counterAppTests/Pods-counterApp-counterAppTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -114,7 +116,6 @@
 				75F3034431FB00E395C56FB7 /* Pods-counterApp-counterAppTests.debug.xcconfig */,
 				75146DAD029B6C6B5B9A1850 /* Pods-counterApp-counterAppTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -128,6 +129,7 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
+				3A03AE1C2762423A0064167E /* fonts */,
 				13B07FAE1A68108700A75B9A /* counterApp */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				00E356EF1AD99517003FC87E /* counterAppTests */,
@@ -243,6 +245,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A03AE1D2762423A0064167E /* fonts in Resources */,
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 			);

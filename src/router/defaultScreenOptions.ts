@@ -1,0 +1,17 @@
+import {StackNavigationOptions} from '@react-navigation/stack';
+import theme from '../styles/theme';
+
+export const defaultScreenOptions: StackNavigationOptions = {
+  headerShown: true,
+  cardStyle: {backgroundColor: '#FFF'},
+};
+
+export const defaultUserScreensOptions: StackNavigationOptions = {
+  headerShown: true,
+  headerTintColor: theme.colors.primary,
+  headerTitleStyle: {fontSize: 20},
+  headerTitleAlign: 'center',
+  headerBackTitleVisible: false,
+  headerStyle: {backgroundColor: '#F6F8FA'},
+  cardStyle: {backgroundColor: '#FFF'},
+};

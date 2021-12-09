@@ -1,10 +1,20 @@
 import React from 'react';
 import {View, Text} from 'react-native';
+import {useTheme} from 'styled-components';
+import {TextSemiBold} from '../../styles/components';
 
 const ConfigScreen = () => {
+  const {colors} = useTheme();
   return (
-    <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
-      <Text style={{color: 'black'}}>ConfigScreen</Text>
+    <View
+      style={{
+        flex: 1,
+        justifyContent: 'center',
+        alignItems: 'center',
+        backgroundColor: colors.secondary,
+      }}>
+      <TextSemiBold fontSize={20}>Counters</TextSemiBold>
+      <TextSemiBold fontSize={20}>Selected Counter</TextSemiBold>
     </View>
   );
 };

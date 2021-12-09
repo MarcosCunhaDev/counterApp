@@ -4,10 +4,10 @@ import {
   defaultScreenOptions,
   defaultUserScreensOptions,
 } from './defaultScreenOptions';
-import {Text} from 'react-native';
-import Home from '../screens/Home';
+import Home from '../screens/Home/index.js';
 import ConfigScreen from '../screens/ConfigScreen';
 import {RouteNames} from './types';
+import {useTheme} from 'styled-components';
 
 const Tab = createBottomTabNavigator();
 
@@ -20,15 +20,11 @@ const HomeTabs = () => {
         activeBackgroundColor: 'white',
         inactiveBackgroundColor: 'white',
       }}
-      screenOptions={({route}) => ({
-        tabBarIcon: ({focused, color, size}) => {
-          return <Text style={{color: 'black'}}>Icon</Text>;
-        },
-      })}>
+      screenOptions={({route}) => ({})}>
       <Tab.Screen
         options={{
           tabBarLabel: 'Início',
-          title: 'Início',
+          title: 'Counters',
           headerTitleAlign: 'center',
         }}
         name={RouteNames.HOME}

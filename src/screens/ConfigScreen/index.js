@@ -1,8 +1,13 @@
 import React from 'react';
-import {View, Text} from 'react-native';
+import {View, Text, TouchableOpacity} from 'react-native';
 import {useTheme} from 'styled-components';
-import {TextSemiBold} from '../../styles/components';
+import {TextSemiBold, TextBold} from '../../styles/components';
 import Icon from 'react-native-vector-icons/FontAwesome';
+import AntDesign from 'react-native-vector-icons/AntDesign';
+import Feather from 'react-native-vector-icons/Feather';
+import ButtonDefault from '../../components/ButtonDefault';
+import ButtonCustom from '../../components/ButtonCustom';
+import {ButtonReset} from './styles';
 
 const ConfigScreen = () => {
   const {colors} = useTheme();
@@ -10,12 +15,77 @@ const ConfigScreen = () => {
     <View
       style={{
         flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center',
         backgroundColor: colors.secondary,
+        padding: 10,
       }}>
-      <TextSemiBold fontSize={20}>Counters</TextSemiBold>
-      <TextSemiBold fontSize={20}>Selected Counter</TextSemiBold>
+      <TextBold fontSize={20}>Counters</TextBold>
+      <View
+        style={{
+          flexDirection: 'row',
+          justifyContent: 'space-around',
+          padding: 10,
+        }}>
+        <ButtonDefault
+          onPress={() => {
+            console.log('marcos');
+          }}
+          label={'Add Counter'}
+        />
+        <ButtonDefault
+          onPress={() => {
+            console.log('marcos');
+          }}
+          label={'Remove Counter'}
+        />
+      </View>
+      <View style={{marginTop: 40}}>
+        <TextBold fontSize={20}>Selected Counter</TextBold>
+        <View
+          style={{
+            // borderWidth: 1,
+            // borderColor: 'white',
+            justifyContent: 'center',
+            marginVertical: 20,
+            padding: 10,
+          }}>
+          <View
+            style={{
+              flexDirection: 'row',
+              justifyContent: 'space-around',
+              alignItems: 'center',
+            }}>
+            <ButtonCustom type={'remove'} onPress={() => {}} />
+            <View
+              style={{
+                width: 100,
+                height: 100,
+                backgroundColor: 'white',
+                borderRadius: 4,
+                justifyContent: 'center',
+                alignItems: 'center',
+              }}>
+              <TextBold fontSize={40} style={{color: 'black'}}>
+                10
+              </TextBold>
+            </View>
+            <ButtonCustom type={'add'} onPress={() => {}} />
+          </View>
+          <View
+            style={{
+              justifyContent: 'center',
+              alignItems: 'center',
+              marginVertical: 10,
+            }}>
+            <ButtonReset>
+              <Feather name={'refresh-ccw'} style={{color: '#fff'}} size={20} />
+
+              <TextSemiBold style={{color: '#fff', textAlign: 'center'}}>
+                Reset {'\n'} Counter
+              </TextSemiBold>
+            </ButtonReset>
+          </View>
+        </View>
+      </View>
     </View>
   );
 };

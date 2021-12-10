@@ -10,19 +10,17 @@ const CounterBox = ({
   index = 1,
   onPress = () => {},
 }) => {
-  const [state, setState] = useState(false);
-
   return (
-    <Box selected={state} onPress={() => setState(!state)}>
+    <Box selected={selected} onPress={onPress}>
       <View
         style={{
           height: '30%',
           width: '100%',
           justifyContent: 'center',
-          padding: 4,
+          padding: 8,
         }}>
-        <TextBold fontSize={20} style={{color: 'black'}}>
-          Counter {index}
+        <TextBold fontSize={20} style={{color: selected ? 'black' : '#BEBEBE'}}>
+          Counter {index + 1}
         </TextBold>
       </View>
       <View
@@ -31,9 +29,9 @@ const CounterBox = ({
           width: '100%',
           justifyContent: 'flex-end',
           alignItems: 'flex-end',
-          padding: 4,
+          padding: 8,
         }}>
-        <TextBold fontSize={50} style={{color: 'black'}}>
+        <TextBold fontSize={60} style={{color: selected ? 'black' : '#BEBEBE'}}>
           {value}
         </TextBold>
       </View>

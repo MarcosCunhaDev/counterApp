@@ -18,20 +18,25 @@ import {
 } from '../../redux/counter/counterSlice';
 
 const ConfigScreen = () => {
-  const {listCounters: counters, currentCounterIndex} = useSelector(
-    state => state.counter,
-  );
+  const {
+    listCounters: counters,
+    currentCounterIndex,
+    currentCounterId,
+  } = useSelector(state => state.counter);
   const dispatch = useDispatch();
   const {colors} = useTheme();
 
   const openAlert = () =>
-    Alert.alert('Atention', 'Confirm delete counter?', [
+    Alert.alert('Attention', `Confirm delete counter ?`, [
       {
         text: 'Cancel',
         onPress: () => console.log('Cancel Pressed'),
         style: 'cancel',
       },
-      {text: 'OK', onPress: () => dispatch(removeCounter(currentCounterIndex))},
+      {
+        text: 'OK',
+        onPress: () => dispatch(removeCounter(currentCounterIndex)),
+      },
     ]);
 
   return (
@@ -52,9 +57,13 @@ const ConfigScreen = () => {
           onPress={() => dispatch(addCounter())}
           label={'Add Counter'}
         />
-        <ButtonDefault onPress={openAlert} label={'Remove Counter'} />
+        <ButtonDefault
+          disabled={currentCounterIndex === null}
+          onPress={openAlert}
+          label={'Remove Counter'}
+        />
       </View>
-      <View style={{marginTop: 40}}>
+      <View style={{marginTop: 100}}>
         <TextBold fontSize={20}>Selected Counter</TextBold>
         {currentCounterIndex !== null ? (
           <>
@@ -96,7 +105,7 @@ const ConfigScreen = () => {
                 style={{
                   justifyContent: 'center',
                   alignItems: 'center',
-                  marginVertical: 10,
+                  marginTop: 20,
                 }}>
                 <ButtonReset
                   onPress={() => dispatch(resetCounter(currentCounterIndex))}>
@@ -117,10 +126,10 @@ const ConfigScreen = () => {
           <View
             style={{
               backgroundColor: 'white',
-
               justifyContent: 'center',
               alignItems: 'center',
               paddingHorizontal: 100,
+              paddingVertical: 50,
               marginVertical: 10,
               borderRadius: 4,
             }}>
@@ -130,7 +139,7 @@ const ConfigScreen = () => {
                 textAlign: 'center',
                 fontSize: 20,
               }}>
-              Adicione um contador para poder editá-lo!
+              Add a counter to be able to edit it!
             </TextBold>
           </View>
         )}

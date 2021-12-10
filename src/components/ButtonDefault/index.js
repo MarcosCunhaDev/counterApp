@@ -3,14 +3,15 @@ import {View, Text, TouchableOpacity} from 'react-native';
 import {useTheme} from 'styled-components';
 import {TextBold} from '../../styles/components';
 
-const CustomButton = ({onPress = () => {}, label = ''}) => {
+const CustomButton = ({onPress = () => {}, label = '', disabled}) => {
   const {colors} = useTheme();
   return (
     <TouchableOpacity
+      disabled={disabled}
       style={{
         paddingHorizontal: 25,
         paddingVertical: 15,
-        backgroundColor: 'white',
+        backgroundColor: disabled ? 'lightgray' : 'white',
         borderRadius: 10,
         width: '40%',
         justifyContent: 'center',

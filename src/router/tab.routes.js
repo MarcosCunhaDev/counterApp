@@ -49,14 +49,16 @@ const HomeTabs = () => {
         tabBarLabel: ({focused, color}) => {
           if (route.name === RouteNames.HOME) {
             return (
-              <TextSemiBold style={{fontSize: 13, color: color}}>
-                Início
+              <TextSemiBold
+                style={{fontSize: 13, color: color, marginBottom: 3}}>
+                Home
               </TextSemiBold>
             );
           } else if (route.name === RouteNames.CONFIG_SCREEN) {
             return (
-              <TextSemiBold style={{fontSize: 13, color: color}}>
-                Configurações
+              <TextSemiBold
+                style={{fontSize: 13, color: color, marginBottom: 3}}>
+                Config
               </TextSemiBold>
             );
           }
@@ -66,6 +68,7 @@ const HomeTabs = () => {
         options={{
           title: 'Counters',
           ...defaultOptions,
+          tabBarLabelPosition: 'below-icon',
         }}
         name={RouteNames.HOME}
         component={Home}
@@ -74,6 +77,7 @@ const HomeTabs = () => {
         options={{
           title: 'Config',
           ...defaultOptions,
+          tabBarLabelPosition: 'below-icon',
         }}
         name={RouteNames.CONFIG_SCREEN}
         component={ConfigScreen}

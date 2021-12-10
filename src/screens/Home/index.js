@@ -28,7 +28,7 @@ const Home = () => {
         selected={currentCounterIndex === index}
         index={index}
         value={counters[index].value}
-        onPress={() => dispatch(setCurrentIndex(index))}
+        onPress={() => dispatch(setCurrentIndex({index, id: item.id}))}
       />
     );
   };
@@ -40,7 +40,7 @@ const Home = () => {
           alignItems: 'center',
           flex: 1,
         }}>
-        <TextBold fontSize={24}>Nenhum contador adicionado!</TextBold>
+        <TextBold fontSize={24}>Add a new counter to edit it!</TextBold>
       </View>
     );
   };

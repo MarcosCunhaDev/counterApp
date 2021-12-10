@@ -9,6 +9,7 @@ const CounterBox = ({
   selected = false,
   index = 1,
   onPress = () => {},
+  id,
 }) => {
   return (
     <Box selected={selected} onPress={onPress}>
@@ -20,7 +21,7 @@ const CounterBox = ({
           padding: 8,
         }}>
         <TextBold fontSize={20} style={{color: selected ? 'black' : '#BEBEBE'}}>
-          Counter {index + 1}
+          Counter {id}
         </TextBold>
       </View>
       <View
@@ -29,9 +30,9 @@ const CounterBox = ({
           width: '100%',
           justifyContent: 'flex-end',
           alignItems: 'flex-end',
-          padding: 8,
+          padding: 15,
         }}>
-        <TextBold fontSize={60} style={{color: selected ? 'black' : '#BEBEBE'}}>
+        <TextBold fontSize={70} style={{color: selected ? 'black' : '#BEBEBE'}}>
           {value}
         </TextBold>
       </View>

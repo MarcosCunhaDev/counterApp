@@ -6,6 +6,7 @@ const initialState = {
   currentCounterIndex: null,
   currentCounterId: null,
   lastId: 0,
+  loading: false,
 };
 
 export const counterSlice = createSlice({
@@ -59,6 +60,9 @@ export const counterSlice = createSlice({
         (item, index) => index != action.payload,
       );
     },
+    setLoading(state, action) {
+      state.loading = action.payload;
+    },
   },
 });
 
@@ -74,3 +78,13 @@ export const {
 } = counterSlice.actions;
 
 export default counterSlice.reducer;
+
+export const addNewCounter = body => async dispatch => {
+  dispatch(setLoading(true));
+  try {
+    dispatch(setBillStatus(data.payment.billStatusId));
+  } catch (error) {
+    notifyApiError(error);
+  }
+  dispatch(setLoading(false));
+};

@@ -11,8 +11,11 @@ import {
   addCounter,
   setCurrentIndex,
 } from '../../redux/counter/counterSlice';
+import EmptyData from '../../components/EmptyList';
+import ButtonCustom from '../../components/ButtonCustom';
+import {RouteNames} from '../../router/types';
 
-const Home = () => {
+const Home = ({route, navigation}) => {
   const {colors} = useTheme();
   const {
     listCounters: counters,
@@ -36,11 +39,30 @@ const Home = () => {
     return (
       <View
         style={{
+          flex: 1,
           justifyContent: 'center',
           alignItems: 'center',
-          flex: 1,
         }}>
-        <TextBold fontSize={24}>Add a new counter to edit it!</TextBold>
+        <EmptyData />
+        <View
+          style={{
+            // position: 'absolute',
+            marginVertical: 20,
+            width: '100%',
+            justifyContent: 'center',
+            alignItems: 'center',
+            padding: 10,
+          }}>
+          <TextBold style={{textAlign: 'center'}} fontSize={24}>
+            We haven't found any counters yet. Add one to edit it.
+          </TextBold>
+        </View>
+        <ButtonCustom
+          type={'right'}
+          onPress={() => {
+            navigation.navigate(RouteNames.CONFIG_SCREEN);
+          }}
+        />
       </View>
     );
   };

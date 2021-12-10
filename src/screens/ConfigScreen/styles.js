@@ -11,3 +11,13 @@ export const ButtonReset = styled.TouchableOpacity`
   justify-content: center;
   align-items: center;
 `;
+
+export const BoxEmpty = styled.View`
+  background-color: white;
+  justify-content: center;
+  align-items: center;
+  padding-horizontal: 100px;
+  padding-vertical: 50px;
+  margin-vertical: 10px;
+  border-radius: 4px;
+`;

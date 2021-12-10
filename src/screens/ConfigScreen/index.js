@@ -1,13 +1,11 @@
 import React from 'react';
-import {View, Text, TouchableOpacity, Alert} from 'react-native';
+import {View, Alert} from 'react-native';
 import {useTheme} from 'styled-components';
 import {TextSemiBold, TextBold} from '../../styles/components';
-import Icon from 'react-native-vector-icons/FontAwesome';
-import AntDesign from 'react-native-vector-icons/AntDesign';
 import Feather from 'react-native-vector-icons/Feather';
 import ButtonDefault from '../../components/ButtonDefault';
 import ButtonCustom from '../../components/ButtonCustom';
-import {ButtonReset} from './styles';
+import {ButtonReset, BoxEmpty} from './styles';
 import {useSelector, useDispatch} from 'react-redux';
 import {
   decrement,
@@ -123,16 +121,7 @@ const ConfigScreen = () => {
             </View>
           </>
         ) : (
-          <View
-            style={{
-              backgroundColor: 'white',
-              justifyContent: 'center',
-              alignItems: 'center',
-              paddingHorizontal: 100,
-              paddingVertical: 50,
-              marginVertical: 10,
-              borderRadius: 4,
-            }}>
+          <BoxEmpty>
             <TextBold
               style={{
                 color: 'black',
@@ -141,7 +130,7 @@ const ConfigScreen = () => {
               }}>
               Add a counter to be able to edit it!
             </TextBold>
-          </View>
+          </BoxEmpty>
         )}
       </View>
     </View>

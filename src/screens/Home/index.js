@@ -1,16 +1,10 @@
 import React from 'react';
-import {View, Text, FlatList} from 'react-native';
+import {View, FlatList} from 'react-native';
 import {useTheme} from 'styled-components';
-import {TextBold, TextSemiBold} from '../../styles/components';
+import {TextBold} from '../../styles/components';
 import CounterBox from '../../components/CounterBox';
 import {useSelector, useDispatch} from 'react-redux';
-import {
-  decrement,
-  increment,
-  reset,
-  addCounter,
-  setCurrentIndex,
-} from '../../redux/counter/counterSlice';
+import {setCurrentIndex} from '../../redux/counter/counterSlice';
 import EmptyData from '../../components/EmptyList';
 import ButtonCustom from '../../components/ButtonCustom';
 import {RouteNames} from '../../router/types';

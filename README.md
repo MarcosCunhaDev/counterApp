@@ -2,7 +2,7 @@
 
 Para executar o app, basta seguir os procedimentos: 
 
-1) Clonar o repositório para sua máquina; 
+1)Clonar o repositório para sua máquina; 
 
 2)Digitar e executar 'yarn' no terminal do referido projeto para instalar as dependências;
 

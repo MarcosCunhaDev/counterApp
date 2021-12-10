@@ -50,14 +50,14 @@ const HomeTabs = () => {
           if (route.name === RouteNames.HOME) {
             return (
               <TextSemiBold
-                style={{fontSize: 13, color: color, marginBottom: 3}}>
+                style={{fontSize: 13, color: color, marginBottom: 1}}>
                 Home
               </TextSemiBold>
             );
           } else if (route.name === RouteNames.CONFIG_SCREEN) {
             return (
               <TextSemiBold
-                style={{fontSize: 13, color: color, marginBottom: 3}}>
+                style={{fontSize: 13, color: color, marginBottom: 1}}>
                 Config
               </TextSemiBold>
             );

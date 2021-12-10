@@ -3,21 +3,12 @@ import {View, Text, TouchableOpacity} from 'react-native';
 import AntDesign from 'react-native-vector-icons/AntDesign';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import {useTheme} from 'styled-components';
+import {ButtonContainer} from './styles';
 
 const ButtonCustom = ({type = 'add', onPress = () => {}, ...props}) => {
   const {colors} = useTheme();
   return (
-    <TouchableOpacity
-      style={{
-        backgroundColor: 'white',
-        width: 80,
-        height: 80,
-        borderRadius: 40,
-        justifyContent: 'center',
-        alignItems: 'center',
-        marginTop: type === 'right' ? 20 : 0,
-      }}
-      onPress={onPress}>
+    <ButtonContainer onPress={onPress}>
       {type === 'add' || type === 'remove' ? (
         <AntDesign
           name={
@@ -37,7 +28,7 @@ const ButtonCustom = ({type = 'add', onPress = () => {}, ...props}) => {
           size={80}
         />
       ) : null}
-    </TouchableOpacity>
+    </ButtonContainer>
   );
 };
 

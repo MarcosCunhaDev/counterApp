@@ -89,6 +89,7 @@ export const NoResults = styled.Text`
 
 export const TextBold = styled.Text`
   color: ${({color, theme}) => theme.colors.text};
+  font-weight: bold;
   ${props =>
     props.fontSize &&
     css`

@@ -25,7 +25,7 @@ const ConfigScreen = () => {
   const {colors} = useTheme();
 
   const openAlert = () =>
-    Alert.alert('Attention', `Confirm delete counter ?`, [
+    Alert.alert('Attention', `Confirm delete selected counter ?`, [
       {
         text: 'Cancel',
         onPress: () => console.log('Cancel Pressed'),
@@ -113,7 +113,11 @@ const ConfigScreen = () => {
                     size={20}
                   />
 
-                  <TextSemiBold style={{color: '#fff', textAlign: 'center'}}>
+                  <TextSemiBold
+                    style={{
+                      color: '#fff',
+                      textAlign: 'center',
+                    }}>
                     Reset {'\n'} Counter
                   </TextSemiBold>
                 </ButtonReset>

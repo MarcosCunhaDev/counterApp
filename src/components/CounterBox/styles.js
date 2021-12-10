@@ -1,5 +1,3 @@
-import Icon from 'react-native-vector-icons/FontAwesome5';
-import Ionicons from 'react-native-vector-icons/Ionicons';
 import styled from 'styled-components/native';
 import {TextRegular} from '../../styles/components';
 

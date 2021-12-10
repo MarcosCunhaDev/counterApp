@@ -8,8 +8,12 @@ import Feather from 'react-native-vector-icons/Feather';
 import ButtonDefault from '../../components/ButtonDefault';
 import ButtonCustom from '../../components/ButtonCustom';
 import {ButtonReset} from './styles';
+import {useSelector, useDispatch} from 'react-redux';
+import {decrement, increment, reset} from '../../redux/counter/counterSlice';
 
 const ConfigScreen = () => {
+  const count = useSelector(state => state.counter.value);
+  const dispatch = useDispatch();
   const {colors} = useTheme();
   return (
     <View
@@ -54,7 +58,10 @@ const ConfigScreen = () => {
               justifyContent: 'space-around',
               alignItems: 'center',
             }}>
-            <ButtonCustom type={'remove'} onPress={() => {}} />
+            <ButtonCustom
+              type={'remove'}
+              onPress={() => dispatch(decrement())}
+            />
             <View
               style={{
                 width: 100,
@@ -65,10 +72,10 @@ const ConfigScreen = () => {
                 alignItems: 'center',
               }}>
               <TextBold fontSize={40} style={{color: 'black'}}>
-                10
+                {count}
               </TextBold>
             </View>
-            <ButtonCustom type={'add'} onPress={() => {}} />
+            <ButtonCustom type={'add'} onPress={() => dispatch(increment())} />
           </View>
           <View
             style={{
@@ -76,7 +83,7 @@ const ConfigScreen = () => {
               alignItems: 'center',
               marginVertical: 10,
             }}>
-            <ButtonReset>
+            <ButtonReset onPress={() => dispatch(reset())}>
               <Feather name={'refresh-ccw'} style={{color: '#fff'}} size={20} />
 
               <TextSemiBold style={{color: '#fff', textAlign: 'center'}}>

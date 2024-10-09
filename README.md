@@ -1,4 +1,6 @@
-# counterApp
+# CounterApp
+
+Português
 
 Para executar o app, basta seguir os procedimentos: 
 
@@ -9,3 +11,15 @@ Para executar o app, basta seguir os procedimentos:
 3)Digitar e executar 'npx pod-install' para instalar as dependências referentes ao ios;
 
 4)Digitar e executar 'yarn android' ou 'yarn ios' para rodar o app no simulador(ios/android) ou device conectado(android).
+
+English
+
+To run the app, simply follow these steps:
+
+Clone the repository to your machine;
+
+Run 'yarn' in the terminal of the project to install the dependencies;
+
+Run 'npx pod-install' to install the dependencies for iOS;
+
+Run 'yarn android' or 'yarn ios' to launch the app in the simulator (iOS/Android) or on a connected device (Android).

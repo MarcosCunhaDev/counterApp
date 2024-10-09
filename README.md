@@ -16,10 +16,10 @@ English
 
 To run the app, simply follow these steps:
 
-Clone the repository to your machine;
+1)Clone the repository to your machine;
 
-Run 'yarn' in the terminal of the project to install the dependencies;
+2)Run 'yarn' in the terminal of the project to install the dependencies;
 
-Run 'npx pod-install' to install the dependencies for iOS;
+3)Run 'npx pod-install' to install the dependencies for iOS;
 
-Run 'yarn android' or 'yarn ios' to launch the app in the simulator (iOS/Android) or on a connected device (Android).
+4)Run 'yarn android' or 'yarn ios' to launch the app in the simulator (iOS/Android) or on a connected device (Android).
